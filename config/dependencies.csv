@@ -1,0 +1,13 @@
+package,role
+readr,runtime
+dplyr,runtime
+tidyr,runtime
+ggplot2,runtime
+tibble,runtime
+yaml,runtime
+digest,runtime
+jsonlite,runtime
+ragg,runtime
+testthat,testing
+callr,testing
+renv,reproducibility

@@ -1,0 +1,16 @@
+testthat::test_that("The single interactive script runs without changing the working directory", {
+  before <- getwd()
+  workspace <- new.env(parent = globalenv())
+  fixture_root <- make_population_test_project()
+  # Render the interactive preview into test scratch, not the user's Plots pane.
+  grDevices::pdf(file.path(test_scratch, "interactive-entry-preview.pdf"))
+  on.exit(grDevices::dev.off(), add = TRUE)
+  source(file.path(fixture_root, "run_population.R"), local = workspace)
+  testthat::expect_identical(getwd(), before)
+  testthat::expect_identical(ls(workspace), "population_run")
+  testthat::expect_equal(nrow(workspace$population_run$results), 10L)
+  testthat::expect_equal(sum(workspace$population_run$results$population), 59597606)
+  testthat::expect_true(file.exists(workspace$population_run$csv))
+  testthat::expect_true(file.exists(workspace$population_run$chart))
+  testthat::expect_true(all(workspace$population_run$results$official_acceptance == "blocked"))
+})

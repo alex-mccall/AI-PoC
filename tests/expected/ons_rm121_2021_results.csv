@@ -1,0 +1,11 @@
+sex_code,sex_label,age_group,age_group_order,population,percent_display
+1,Female,0-4,1,1577358,5.2
+1,Female,5-15,2,3803829,12.5
+1,Female,16-24,3,3116309,10.2
+1,Female,25-64,4,15926041,52.4
+1,Female,65+,5,5996744,19.7
+2,Male,0-4,1,1654696,5.7
+2,Male,5-15,2,3995312,13.7
+2,Male,16-24,3,3202014,11.0
+2,Male,25-64,4,15258709,52.3
+2,Male,65+,5,5066594,17.4

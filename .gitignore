@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Generated run evidence is retained locally, not committed by default.
+outputs/
+
+# Optional server-local restored library; keep renv.lock versioned.
+.library/
+
+# Preservation snapshots are backed up separately; keep summaries/scripts tracked.
+preservation/bundles/
+.DS_Store

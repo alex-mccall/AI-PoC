@@ -1,0 +1,36 @@
+dataset_id: ons_rm121_sex_by_age_2021
+input_file: Inputs/ons_rm121_sex_by_age_2021.csv
+output_directory: outputs
+encoding: UTF-8
+delimiter: ','
+age_reference: reference/age_mappings/ons_rm121_2021.csv
+sex_reference: reference/sex_categories/ons_rm121_2021.csv
+columns:
+  geography_code: Lower tier local authorities Code
+  geography_name: Lower tier local authorities
+  sex_code: Sex (2 categories) Code
+  sex_label: Sex (2 categories)
+  source_age_code: Age (23 categories) Code
+  source_age_label: Age (23 categories)
+  population_raw: Observation
+context:
+  geography_label: England and Wales
+  geography_level: Lower tier local authorities
+  geography_version: null
+  period_label: Census 2021
+  exact_observation_date: null
+  source_url: null
+  download_date: null
+  release_id: null
+  population_definition: null
+  provenance_status: incomplete_supplied_files_only
+analysis:
+  percentage_denominator: within_sex
+  percentage_tolerance: 0.00000001
+  age_group_order: ['0-4', '5-15', '16-24', '25-64', '65+']
+  complete_category_grid: true
+  outputs: [csv, png]
+  output_policy: provisional_review_only
+acceptance:
+  authoritative_geography_coverage: blocked
+  official_benchmark_reconciliation: blocked
